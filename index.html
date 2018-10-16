@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pricing Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main2.css" />
+
+</head>
+
+<body>
+
+    <div class="container">
+
+            <nav class="flex-nav">
+                    <a id="toggleNav" href="#">&#8801 Menu</a>
+                    <ul id="open">
+                        <!-- <li><a href="#"><img src="greaterthan.png"></a></li> -->
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Vet</a>
+                        <!-- <li class="social">
+                            <a href="#">&#120078</a>
+                        </li>
+                        <li class="social">
+                            <a href="#">&#9827</a>
+                        </li>
+                        <li class="social">
+                            <a href="#">&#9742</a>
+                        </li> -->
+                        <!-- <li><a href="#"><img src="lessthan.png"></a></li> -->
+                    </ul>
+                </nav>
+    
+        <!-- Flex container -->
+        <div class="pricing-grid">            
+
+            <div class="plan plan1">
+                <h2>Cat</h2>
+                <p>Common, yet regarded by many as the worst house pet.</p>
+                <ul class="features">
+                    <li>Scratches everything</li>
+                    <li>Easily lost for days</li>
+                    <li>Kind of a bumer</li>
+                </ul>
+                <p class="Price free">free</p>
+                <a href="#" class="cta">&#x1F406 Really?</a>
+            </div>
+
+            <div class="plan plan2">
+                <h2>Dog</h2>
+                <p>Loving, gentle and caring. Dogs are the best house pet to have and will increase happiness ten fold. </p>
+                <ul class="features">
+                    <li>Super Fun</li>
+                    <li>Friends love them</li>
+                    <li>Plays games</li>
+                    <li>Not a cat</li>
+                </ul>
+                <p class="price">₦5000</p>
+                <a href="#" class="cta">&#x1F415 Best Deal &#10230</a>
+            </div>
+
+            <div class="plan plan3">
+
+                <h2>Fish</h2>
+                <p>Cheap n' easy</p>
+                <ul class="features">
+                    <li>Eats flakes</li>
+                    <li>Cop out</li>
+                    <li>Replaceable</li>
+                </ul>
+                <p class="price">₦1000</p>
+                <a href="#" class="cta">&#x1F41F Yummy!</a>
+
+            </div>
+
+
+        </div>
+
+        <div class="cover">
+
+            <form class="flex-form">
+                <input type="search" placeholder="Make your choice!">
+                <label for="from">Year</label>
+                <input type="date" name="from">
+
+                <label for="from">To</label>
+                <input type="date" name="to">
+
+                <select name="option" id="option">
+                    <!-- <option value="1">Select &#x1F177</option> -->
+                    <option value="2">Cat &#x1F406</option>
+                    <option value="3">Dog &#x1F415</option>
+                    <option value="4">Fish &#x1F41F</option>
+                </select>
+
+                <input type="submit" value="search">
+            </form>
+        </div>
+
+    </div>
+    <video autoplay muted loop id="myVideo">
+            <source src="cado.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <!-- <button id="myBtn" onclick="myFunction()">Pause</button> -->
+
+</body>
+<script src="../main.js"></script>
+</html>
