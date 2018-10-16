@@ -1,116 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pricing Grid</title>
+    <title>Eden Side | Welcome</title>
+    <meta name="description" content="The making of a responsive website">
+    <meta name="keywords" content="web design, responsive web site">
+    <meta name="author" content="Joyce-O">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-
+    <script src="main.js"></script>
+    <!-- to format older browsers -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 </head>
-
 <body>
-
-    <div class="container">
-
-            <nav class="flex-nav">
-                    <a id="toggleNav" href="#">&#8801 Menu</a>
-                    <ul id="open">
-                        <!-- <li><a href="#"><img src="greaterthan.png"></a></li> -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Eden Side</h1>
+            </div>
+            <div>
+                <nav>
+                    <ul>
                         <li>
-                            <a href="#">Contact</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
+                            <a class="current" href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="#">Vet</a>
-                        <!-- <li class="social">
-                            <a href="#">&#120078</a>
+                            <a href="about.html">About</a>
                         </li>
-                        <li class="social">
-                            <a href="#">&#9827</a>
+                        <li>
+                            <a href="Books.html">Books</a>
                         </li>
-                        <li class="social">
-                            <a href="#">&#9742</a>
-                        </li> -->
-                        <!-- <li><a href="#"><img src="lessthan.png"></a></li> -->
                     </ul>
                 </nav>
-    
-        <!-- Flex container -->
-        <div class="pricing-grid">            
-
-            <div class="plan plan1">
-                <h2>Cat</h2>
-                <p>Common, yet regarded by many as the worst house pet.</p>
-                <ul class="features">
-                    <li>Scratches everything</li>
-                    <li>Easily lost for days</li>
-                    <li>Kind of a bumer</li>
-                </ul>
-                <p class="Price free">free</p>
-                <a href="#" class="cta">&#x1F406 Really?</a>
             </div>
-
-            <div class="plan plan2">
-                <h2>Dog</h2>
-                <p>Loving, gentle and caring. Dogs are the best house pet to have and will increase happiness ten fold. </p>
-                <ul class="features">
-                    <li>Super Fun</li>
-                    <li>Friends love them</li>
-                    <li>Plays games</li>
-                    <li>Not a cat</li>
-                </ul>
-                <p class="price">₦5000</p>
-                <a href="#" class="cta">&#x1F415 Best Deal &#10230</a>
-            </div>
-
-            <div class="plan plan3">
-
-                <h2>Fish</h2>
-                <p>Cheap n' easy</p>
-                <ul class="features">
-                    <li>Eats flakes</li>
-                    <li>Cop out</li>
-                    <li>Replaceable</li>
-                </ul>
-                <p class="price">₦1000</p>
-                <a href="#" class="cta">&#x1F41F Yummy!</a>
-
-            </div>
-
-
         </div>
-
-        <div class="cover">
-
-            <form class="flex-form">
-                <input type="search" placeholder="Make your choice!">
-                <label for="from">Year</label>
-                <input type="date" name="from">
-
-                <label for="from">To</label>
-                <input type="date" name="to">
-
-                <select name="option" id="option">
-                    <!-- <option value="1">Select &#x1F177</option> -->
-                    <option value="2">Cat &#x1F406</option>
-                    <option value="3">Dog &#x1F415</option>
-                    <option value="4">Fish &#x1F41F</option>
-                </select>
-
-                <input type="submit" value="search">
+    </header>
+    <section id="showcase">
+        <div class="container">
+            <h2><i><span class="highlight">Elb</span> & <span id="flow">Flow</span></i></h2>
+            <p id="top-qoute"><q><i>I will forgive the cashew stains,
+                The caked mud on your dress,
+                but your tangled hair speaks
+                a lot about your working class mother.
+            </q> <br>~ chibu</i></p>
+        </div>
+    </section>
+    <section id="newsletter">
+        <div class="container">
+            <h2>Subscribe To Our Newsletter</h2>
+            <form action="">
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="btn1">Subscribe</button>
             </form>
         </div>
-
-    </div>
-    <video autoplay muted loop id="myVideo">
-            <source src="cado.mp4" type="video/mp4"> Your browser does not support HTML5 video.
-        </video>
-        <!-- <button id="myBtn" onclick="myFunction()">Pause</button> -->
-
+    </section>
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <h3><span class="icon">&#9834</span><br>Poem</h3>
+                <p>Walking a dragonfly home,
+                        my lost dream
+                        a tin can
+                        last bus -
+                        waving at 
+                        a receding  egret
+                            
+                </p>
+            </div>
+            <div class="box">
+                <h3><span class="icon">&#8903</span> <br> Poetry</h3>
+                <p>Alone on the pavement, chewing kpomo, rocking her ragdoll. Migrating storks painted deep into a stone wall. Evening blues
+                    two herons suck the sun in a pond.
+                
+                
+                </p>
+            </div>
+            <div class="box">
+                <h3><span class="icon">&#8880</span>  <br> Prose</h3>
+                <p>Adjusting to dawn, A flamingo unfolds its neck. Sea breeze teazing lilacs the angelus. He wached a yellow jacaranda pluck
+                    fire from the sun.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Joyce-O <span id="copyright">copyright &copy; 2018</span></p>
+    </footer>
 </body>
-<script src="../main.js"></script>
 </html>
