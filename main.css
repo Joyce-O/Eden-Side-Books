@@ -1,219 +1,266 @@
-html {
-    box-sizing: border-box;
+/* To format the HTML5 sementic elements properly by older browsers */
+article, aside, figure, footer, header, nav, section {
+    display: block;
 }
-
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: rgba(18, 48, 24, 0.3);
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    order: -9999;
-}
-
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    z-index: -1;
-    padding: 20px;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-}
-.flex-nav {
-    order: 1;
-    align-self: center;
-    padding-top: 15px;
-    margin-top: 10px;
-    margin-right: -999px;
-}
-#toggleNav {
-    display: block;
-    color: aliceblue;
-    text-decoration: none;
-    line-height: 2em;
-    font-weight: 900;
-}
-.flex-nav ul {
-    display: none;
-    flex-direction: row;
-}
-.flex-nav li, a {
-    list-style: none;
-    /* background: rgba(255,255,255, 0.2); */
-    justify-content: center;
-    display: block;
-    color: greenyellow;
-    text-decoration: none;
-    line-height: 2em;
-    font-weight: 900;
-    text-align: center;
-    padding: 5px;
-}
-
-
-.plan ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
-    list-style: none;
+    background-color: #f4f4f4; 
 }
-p {
+/* Global */
+.container {
+    width: 80%; /*to make it responsive no specific px setting;*/
+    margin: auto; /*makes it go to the middle*/
+    overflow: hidden; /*So that no scroll bar where not necessary?*/
+
+}
+ul {
+    margin: 0;/*By default UL has margins and padding so this will remove them*/
+    padding: 0; 
+}
+.btn1 {
+     height: 38px;
+     background: #e8491d;
+     border: 0;
+     color: white;
+     border-radius: 3px;
+     outline: none;
+}
+.dark {
+    padding: 15px;
+    background: #35424a;
     color: white;
+    margin-top: 10px;
+    margin-bottom:10px;
 }
-.plan ul li:last-child {
-    border-bottom: 0;
+/* header */
+header {
+    background: #35424a;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px; /*This ensures height adjusts to small screen resize*/
+    border-bottom: #e8491d 3px solid;
 }
-.plan a {
+#branding h1 {
+    color: rgb(231, 241, 83);
+    font-style: italic;
+    letter-spacing: .8em;
+}
+header a {
+    color: white;
     text-decoration: none;
-    background: rgb(54, 16, 124);
-    padding: 10px;
-    color: yellow;
-    border-radius:4px; 
-}
-.plan a:hover {
-    background: rgb(54, 16, 90);
-}
-.plan h2 {
     text-transform: uppercase;
-    color: rgb(27, 194, 63);
-    letter-spacing: 2px;
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-}
-.free {
-    font-weight: bolder;
-    font-size: 1em;
-    letter-spacing: 4;
-    text-transform: uppercase;
-}
-.price {
-    font-size: 50px;
-    font-family: serif;
-    margin: 10px 0;
-}
-.pricing-grid {
-    order: 3;
-    padding-top: 40px;
-    max-width: 750px;
-    margin: 0 auto;
-    flex: 3;
-    display: flex;
-    align-items: center;
-    border-left: 1px dotted green;
-    border-right: 1px dotted green;
-
+    font-size: 16px;
 }
 
-.plan {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    background: rgba(255,255,255, 0.2);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 4px;
-    text-align: center;
+header li {
+    display: inline; /*floats it to left*/
+    padding: 0 20px 0 20px; /* right and left 20px while top/bottom 0px*/
 }
-/* All the descendants of plan */
-.plan > * {
-    flex: 1 1 100%;
-    /* flex-basis: 100%; */
-
+.current {
+    color: orangered;
 }
-.plan .cta {
-    align-self: flex-end;
+header #branding {
+    float: left;
 }
-.plan ul li {
+header #branding h1 {
+    margin: 0;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+.highlight {
+    color:  whitesmoke;;
+    font-weight: 900;
+    letter-spacing: .2em;
+} 
+#flow {
+    color: rgb(35, 106, 134);
+}
+header a:hover {
     color: silver;
-    padding-left: 10px;
-    text-align: start;
-    /* display: flex; */
-    list-style-image: url(ico.jpg)
-    /* border-bottom: 1px solid rgba(0,0,00.2); */
+    font-weight: bold;
 }
-
-/* flexbox starts here */
-.cover {
-    flex: 1;
-    display: flex;
-    order: 2;
-    width: 100%; 
-    justify-content: center;
-    padding: 10px;
-    /* border: 2px solid rgba(0, 0, 0, 0.3); */
-    border-radius: 5px;
-    margin-top: -10px;
-    margin-bottom: 40px; 
-    align-items: center;
+/* Showcase */
+#showcase {
+    min-height: 400px; /*so that it can be responsive*/
+    background: url("https://i.postimg.cc/Vs4cXKLX/elb.jpg") no-repeat 0;
+    opacity: 0.7;
+    border-bottom: 4px solid rgb(206, 204, 204);
 }
-.flex-form {
-    display: flex;
-    border: 20px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
-.flex-form > * {
-    border: 0;
-    padding: 10px;
-    background: white;
-    border-radius: 0;
-    outline: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-appearance: none;
-}
-.flex-form > *:last-child {
-    border-right: 0;
-}
-
-input[type="search"] {
-    flex: 2;
-    padding: 5px;
-}
-#option {
-    padding: 4px;
-    /* margin-top: 40px; */
-}
-input[type="search"]:hover, input[type="date"]:hover, #option:hover{
-    border: 2px solid green;
-}
-input[type="submit"] {
-    background-color: rgb(27, 194, 63);
-    border: 0;
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 3px;
-}
-input[type="submit"]:hover {
-    background: forestgreen;
-}
-label {
-    color: goldenrod;
-}
-
-/* #myBtn {
+#top-qoute {
+    color: rgb(164, 173, 34);
     width: 200px;
-    font-size: 18px;
-    padding: 10px;
+}
+/* newsletter */
+#newsletter {
+    padding: 15px;
+    color: white;
+    background-color: #35424a;
+}
+#newsletter h2 {
+    float: left;
+    
+}
+#newsletter form {
+    float: right;
+    margin-top: 15px;
+}
+#newsletter input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    border-radius: 2px;
     border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
+    width: 250px;
 }
-
-#myBtn:hover {
-    background: #ddd;
-    color: black;
-} */
-
-@media screen and (max-width: 500px) { 
-  div{width:70%;} 
+/* boxes */
+#boxes {
+    margin-top: 20px;
 }
-@media screen and (max-device-width: 800px) {
-  html { background: url(cat-dog.jpg) #000 no-repeat center center fixed; }
-  #myVideo { display: none; }
+#boxes .box {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: start;
+    border-right: 1px solid gainsboro;
+}
+#boxes :last-child {
+    border: none;
+}
+#boxes .box h3 {
+    text-align: center;
+    color: dimgray;
+    
+}
+#boxes .icon {
+    background: rgba(197, 209, 33, 0.733);
+    padding: 5px;
+    border-radius: 50%;
+}
+/* sidebar */
+aside#sidebar {
+    float: right;
+    width: 30%;
+    list-style: georgian;
+    /* padding-left: 5px; */
+    margin-top: 10px;
+    border-left: 4px solid gainsboro;
+
+} 
+.page-title {
+    font-size: 200%;
+    text-shadow: 2px 2px 2px rgba(197, 209, 33, 0.733);
+}
+aside#sidebar .send-copy input {
+  width: 90%;
+  padding: 5px;
+}
+/* Main-col */
+article#main-col {
+    float: left;
+    width: 65%;
+}
+/* Books */
+ul#books li {
+    list-style: none;
+    padding: 20px;
+    border: gray double 2px;
+    margin-bottom: 5px;
+    background: #d6d3d3;
+}
+/* footer */
+footer {
+    padding: 10px;
+    margin-top: 20px;
+    color: rgb(224, 217, 217);
+    background: #e8491dd7;
+    text-align: center;
+    border-top: 5px solid gainsboro;
+    border-bottom: 5px solid #35424a;
+}
+footer #copyright {
+    padding-left: 10px;
+
+}
+/* Screen size below 500px */
+@media all and (max-width: 500px) {
+    .btn1 {
+        width: 70px;
+        padding: 5px;
+    }
+    #newsletter input[type="email"] {
+        padding: 4px;
+        height: 30px;
+        border-radius: 2px;
+        border: none;
+        width: 200px;
+    }
+    
+    #branding h1 {
+        letter-spacing: .2em;
+        font-size: 16px;
+        padding-left: 80px;
+        padding-top: 5px;
+    }
+    
+   
+    #showcase {
+        background: url("https://i.postimg.cc/fTKktc1P/elb2.jpg") no-repeat 0 -100px;
+        background-blend-mode: hue;
+        background-size: 80vh;
+        min-height:100px;
+    }
+    #showcase h2{
+         font-size: 14px;
+    }
+    #showcase p{
+        font-size: 14px;
+        width: 150px
+   }
+   .highlight {
+    color:  whitesmoke; /*rgb(67, 71, 10);*/
+    font-weight: 900;
+    letter-spacing: .2em;
+} 
+#newsletter h2 {
+    font-size: 16px;
+    padding-left: 20px;
+    
+}
+#boxes .box {
+    
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    flex: 1;
+    margin: 0;
+    margin-left: 3px;
+    padding: 0;
+    text-align: start;
+    padding-right: 3px;
+    padding-left: 3px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+/* Main-col */
+article#main-col {
+    float: none;
+    width: 100%;
+}
+/* sidebar */
+aside#sidebar {
+    float: none;
+    width: 100%;
+    list-style: georgian;
+    /* padding-left: 5px; */
+    margin-top: 10px;
+    border-left: 4px solid gainsboro;
+
+} 
+
+    
 }
