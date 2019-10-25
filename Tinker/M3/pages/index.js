@@ -2,11 +2,17 @@ import React from 'react';
 import DigitalClock from "../src/DigitalClock";
 
 class Index extends React.Component {
+    // Add a static method to serialize the props for client side rendering
+    static async getInitialProps() {
+        return ({
+            time: new Date().toLocaleString()
+        });
+    }
     // ADD CONSTRUCTOR AND SET THE STATE
     constructor(props) {
         super(props);
         this.state = {
-            time: new Date().toLocaleString()
+            time: props.time
         }
     }
     // FUNCTION THAT HANDLES UPDATE OF TIME EVERY  //setState too
