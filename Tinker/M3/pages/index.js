@@ -4,10 +4,19 @@ import DigitalClock from "../src/DigitalClock";
 class Index extends React.Component {
     // Add a static method to serialize the props for client side rendering
     static async getInitialProps() {
-        return ({
-            time: new Date().toLocaleString()
+    //     return ({
+    //         time: new Date().toLocaleString()
+    //     });
+
+    const promise = new Promise((resolve, reject) => {
+        setInterval(() => { resolve({
+            time: new Date().toISOString()
+        }, 3000);
         });
+    });
+    return promise;
     }
+    //USING PROMISE SO THE CLASS CAN ACTUALLY CONTINUE RUNNING OTHER THINGS BEFORE getInitialProps resolves
     // ADD CONSTRUCTOR AND SET THE STATE
     constructor(props) {
         super(props);
