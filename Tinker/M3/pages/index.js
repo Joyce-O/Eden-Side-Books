@@ -1,4 +1,5 @@
 import React from 'react';
+import DigitalClock from "../src/DigitalClock";
 
 class Index extends React.Component {
     // ADD CONSTRUCTOR AND SET THE STATE
@@ -29,7 +30,8 @@ class Index extends React.Component {
     // Call the render method
     render() {
         // CHANGING TO JSX SYNTAX
-        return <h1>Hello from Joyceland: {this.state.time}</h1>
+        return <DigitalClock time={this.state.time}></DigitalClock>
+        // return <h1>Hello from Joyceland: {this.state.time}</h1>
     }
 };
 
