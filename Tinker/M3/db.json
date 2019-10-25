@@ -1,4 +1,21 @@
 {
+  "speakers": [
+    {
+      "id": 1530,
+      "firstName": "Tammy",
+      "lastName": "Baker",
+      "email": "",
+      "phoneNumber": "",
+      "bio": "Tammy has held a number of executive and management roles over the past 15 years, including vice president of engineering Cantaloupe Systems, vice president of engineering at Untangle, Inc., and vice president of engineering at E-Color. More recently, Tammy is vice president of engineering and CSO for Cantaloupe Systems which was recently acquired by USA Technologies.",
+      "webSite": "https://www.linkedin.com/in/tammybaker/",
+      "imageUrl": "//ddrt7tzfkdwdf.cloudfront.net/attendeeimage/20181016014259-1530.jpg",
+      "allowAttendeeToEmailMe": true,
+      "company": "Code Camp",
+      "city": "x",
+      "state": "x",
+      "presentationLimit": 0
+    }
+  ],
   "posts": [
     {
       "id": 1,

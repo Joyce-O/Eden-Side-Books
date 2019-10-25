@@ -59,11 +59,11 @@ class Index extends React.Component {
                 <Link href='/sessions'>
                     <a>sessions</a>
                 </Link>
-            <ul>
-                {this.state.commmentData.map((comment) =>
-                    <li key={comment.id}>{comment.body} {comment.postId}</li>
+                <ul>
+                    {this.state.commmentData.map((comment) =>
+                      <li key={comment.id}>{comment.body} {comment.postId}</li>
                     )}
-            </ul>
+                </ul>
             </div>
 
         ) 
