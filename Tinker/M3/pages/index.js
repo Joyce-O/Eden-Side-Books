@@ -1,6 +1,7 @@
 import React from 'react';
 // import DigitalClock from "../src/DigitalClock";
 import axios from 'axios';
+import Link from 'next/link';
 
 class Index extends React.Component {
     // Add a static method to serialize the props for client side rendering
@@ -54,11 +55,16 @@ class Index extends React.Component {
         // return <DigitalClock time={this.state.time}></DigitalClock>
         // return <h1>Hello from Joyceland: {this.state.time}</h1>
         return (
+            <div>
+                <Link href='/sessions'>
+                    <a>sessions</a>
+                </Link>
             <ul>
                 {this.state.commmentData.map((comment) =>
                     <li key={comment.id}>{comment.body} {comment.postId}</li>
                     )}
             </ul>
+            </div>
 
         ) 
     }
