@@ -1,73 +1,69 @@
-import React from 'react';
-// import DigitalClock from "../src/DigitalClock";
-import axios from 'axios';
-import Link from 'next/link';
+import React, {Component} from 'react';
 
-class Index extends React.Component {
-    // Add a static method to serialize the props for client side rendering
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/site.css';
+
+class Index extends Component {
+
     static async getInitialProps() {
-        // USING A REST CALL
-        var promise = axios.get('http://localhost:4000/comments').then(response => {
-            return {
-                hasErrored: false,
-                commmentData: response.data
-            };
-        })
-        .catch(error => {
-            return {
-                hasErrored: true,
-                message: error.message
-            }
-        });
-        return promise;
-    }
-    //USING PROMISE SO THE CLASS CAN ACTUALLY CONTINUE RUNNING OTHER THINGS BEFORE getInitialProps resolves
-    // ADD CONSTRUCTOR AND SET THE STATE
-    constructor(props) {
-        super(props);
-        this.state = {
-            hasErrored: props.hasErrored,
-            message: props.message,
-            commmentData: props.commmentData
-        }
-    }
-    // FUNCTION THAT HANDLES UPDATE OF TIME EVERY  //setState too
-    // tick() {
-    //     this.setState(() => {
-    //         return ({
-    //             time: new Date().toLocaleString()
-    //         });
-    //     });
-    // }
-    // AFTER THAT CALL THE LIFECYCLE METHOD
-    componentDidMount() {
-        // this.interval = setInterval(() => this.tick(), 1000);
+        return {};
     }
 
-    // Add this to avoid memory leak when this component is removed
-    componentWillUnmount() {
-        // clearInterval(this.interval);
-    }
-
-    // Call the render method
     render() {
-        // CHANGING TO JSX SYNTAX
-        // return <DigitalClock time={this.state.time}></DigitalClock>
-        // return <h1>Hello from Joyceland: {this.state.time}</h1>
         return (
             <div>
-                <Link href='/sessions'>
-                    <a>sessions</a>
-                </Link>
-                <ul>
-                    {this.state.commmentData.map((comment) =>
-                      <li key={comment.id}>{comment.body} {comment.postId}</li>
-                    )}
-                </ul>
+                <div className="jumbotron">
+                    <div className="row">
+                        <div className="col-12 col-sm-4 text-center">
+                            <h6 className="text-uppercase">October 13-14&nbsp;&nbsp;2018</h6>
+                            <h6 className="text-uppercase">San Jose, California</h6>
+                        </div>
+                        <div className="col-12 col-sm-8 text-lg-right">
+                            <div><img src='/static/SVCClogo.png'/></div>
+                            <h2>Silicon Valley Code Camp 2018</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <div className="navbar">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Speakers</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Sessions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div className="container">
+                    <div className="row">
+                        <div className="col margintopbottom">
+                            <h2>Home</h2>
+                            <h6 className="margintopbottom20">
+                                Silicon Valley Code Camp is a community event where
+                                developers learn from fellow developers.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="jumbotron text-center">
+                    <h7><b>Silicon Valley Code Camp 2018</b> is Hosted by PayPal in San Jose
+                        at their Town Hall location. 2121 North First Street. <b>October 13-14 2018</b></h7>
+                </div>
             </div>
 
-        ) 
+        );
     }
-};
+}
+
+Index.propTypes = {};
+Index.defaultProps = {};
 
 export default Index;
