@@ -10,12 +10,12 @@ const rootElement = document.getElementById('App');
 // rootElement.appendChild(myElement); // Useful for V JS
 
 // REPLACING WITH REACT FUNCTIONAL COMPONENT
-const Hello = function() {
-    return React.createElement('h1', {className: 'orange'}, 'Hello from JoyceLand')
+const Hello = function(props) {
+    return React.createElement('h1', {className: 'orange'}, 'Hello from JoyceLand ' + props.time)
 };
 
 ReactDOM.render(
     // myReactElement, document.getElementById('App')
-    React.createElement(Hello, {}, null),
+    React.createElement(Hello, {time: new Date().toLocaleDateString()}, null),
     document.getElementById('App')
 );
